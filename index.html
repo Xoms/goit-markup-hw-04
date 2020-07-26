@@ -34,15 +34,13 @@
             <ul class="nav__contacts list">
                 <li class="nav__contacts-item"> 
                     
-                    <a class="link nav__contacts-link" href="mailto:info@devstudio.com">
-                        <img src="./images/icons/envelope.svg" alt="envelope">
+                    <a class="link nav__contacts-link nav__contacts-link--icon-envelope" href="mailto:info@devstudio.com">                        
                         info@devstudio.com
                     </a> 
                 </li>
                 <li class="nav__contacts-item">
                     
-                    <a class="link nav__contacts-link" href="tel:+380961111111">
-                        <img src="./images/icons/smartphone.svg" alt="smartphone">
+                    <a class="link nav__contacts-link nav__contacts-link--icon-tel" href="tel:+380961111111">
                         +38 096 111 11 11
                     </a>
                 </li>
@@ -54,8 +52,7 @@
       
     <main>
         <!--Hero section -->
-        <section class="hero">
-            <div class="hero__image-overlay"></div>            
+        <section class="hero">                        
             <h1 class="hero__title">
                 Эффективные решения <br>
                 для вашего бизнеса
@@ -74,68 +71,48 @@
                 <ul class="features__list list">
 
                     <!--Features item 1-->
-                    <li class="features__list-item">
-                        <div class="features__item-image">
-                            <img src="images/features/feature1.png" alt="antenna">
-                        </div>
-                        <div class="features__item-description">
-                            <h3 class="item-title features__item-title">
-                                Внимание к деталям
-                            </h3>
-                            <p class="features__item-text">
-                                Идейные соображения, а также начало повседневной 
-                                работы по формированию позиции.
-                            </p>
-                        </div>
+                    <li class="features__list-item features__list-item--icon-antenn">
+                        <h3 class="item-title features__item-title">
+                            Внимание к деталям
+                        </h3>
+                        <p class="features__item-text">
+                            Идейные соображения, а также начало повседневной 
+                            работы по формированию позиции.
+                        </p>                  
                     </li>
 
                     <!--Features item 2-->
-                    <li class="features__list-item">
-                        <div class="features__item-image">
-                            <img src="images/features/feature2.png" alt="clock">
-                        </div>
-                        <div class="features__item-description">
-                            <h3 class="item-title features__item-title">
-                                Пунктуальность
-                            </h3>
-                            <p class="features__item-text">
-                                Задача организации, в особенности же рамки и место 
-                                обучения кадров влечет за собой.
-                            </p>
-                        </div>
+                    <li class="features__list-item  features__list-item--icon-clock">
+                        <h3 class="item-title features__item-title">
+                            Пунктуальность
+                        </h3>
+                        <p class="features__item-text">
+                            Задача организации, в особенности же рамки и место 
+                            обучения кадров влечет за собой.
+                        </p>
                     </li>
 
                         <!--Features item 3-->
-                    <li class="features__list-item">
-                        <div class="features__item-image">
-                            <img src="images/features/feature3.png" alt="diagramm">
-                        </div>
-                        <div class="features__item-description">
-                            <h3 class="item-title features__item-title">
-                                Планирование
-                            </h3>
-                            <p class="features__item-text">
-                                Равным образом консультация с широким активом в значительной 
-                                степени обуславливает.
-                            </p>
-                        </div>
+                    <li class="features__list-item  features__list-item--icon-diagramm">
+                        <h3 class="item-title features__item-title">
+                            Планирование
+                        </h3>
+                        <p class="features__item-text">
+                            Равным образом консультация с широким активом в значительной 
+                            степени обуславливает.
+                        </p>
                     </li>
 
 
                 <!--Features item 4-->
-                    <li class="features__list-item">
-                        <div class="features__item-image">
-                            <img src="images/features/feature4.png" alt="astronaut">
-                        </div>
-                        <div class="features__item-description">
-                            <h3 class="item-title features__item-title">
-                                Современные технологии
-                            </h3>
-                            <p class="features__item-text">
-                                Значимость этих проблем настолько очевидна, что реализация 
-                                плановых заданий.
-                            </p>
-                        </div>
+                    <li class="features__list-item  features__list-item--icon-astronaut">
+                        <h3 class="item-title features__item-title">
+                            Современные технологии
+                        </h3>
+                        <p class="features__item-text">
+                            Значимость этих проблем настолько очевидна, что реализация 
+                            плановых заданий.
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -156,7 +133,7 @@
                             Десктопные приложения
                         </h3>
                     </li>
-                    <li class=" activities__list-item">
+                    <li class="activities__list-item">
                         <img class="activities__item-img" src="./images/activities/activity2.jpg" alt="Мобильные приложения">
                         <h3 class="item-title activities__item-title">
                             Мобильные приложения
@@ -192,25 +169,21 @@
                         <p class="team__card-position">
                             Product Designer
                         </p>
-                        <ul class="team__social-links list">
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Instagramm">
-                                    Instagramm
+                        <ul class="list social-links">
+                            <li class="social-links__item">
+                                <a class="social-link social-link--instagramm" href="#" aria-label="Instagramm">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Twitter">
-                                    Twitter
+                            <li class="social-links__item">
+                                <a class="social-link social-link--twitter" href="#" aria-label="Twitter">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Facebook">
-                                    Facebook
+                            <li class="social-links__item">
+                                <a class="social-link social-link--facebook" href="#" aria-label="Facebook">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="LinkedIn">
-                                    LinkedIn
+                            <li class="social-links__item">
+                                <a class="social-link social-link--linkedin" href="#" aria-label="LinkedIn">
                                 </a>
                             </li>
                         </ul>
@@ -226,25 +199,21 @@
                         <p class="team__card-position">
                             Frontend Developer
                         </p>
-                        <ul class="team__social-links list">
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Instagramm">
-                                    Instagramm
+                        <ul class="list social-links">
+                            <li class="social-links__item">
+                                <a class="social-link social-link--instagramm" href="#" aria-label="Instagramm">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Twitter">
-                                    Twitter
+                            <li class="social-links__item">
+                                <a class="social-link social-link--twitter" href="#" aria-label="Twitter">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Facebook">
-                                    Facebook
+                            <li class="social-links__item">
+                                <a class="social-link social-link--facebook" href="#" aria-label="Facebook">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="LinkedIn">
-                                    LinkedIn
+                            <li class="social-links__item">
+                                <a class="social-link social-link--linkedin" href="#" aria-label="LinkedIn">
                                 </a>
                             </li>
                         </ul>
@@ -260,25 +229,21 @@
                         <p class="team__card-position">
                             Marketing
                         </p>
-                        <ul class="team__social-links list">
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Instagramm">
-                                    Instagramm
+                        <ul class="list social-links">
+                            <li class="social-links__item">
+                                <a class="social-link social-link--instagramm" href="#" aria-label="Instagramm">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Twitter">
-                                    Twitter
+                            <li class="social-links__item">
+                                <a class="social-link social-link--twitter" href="#" aria-label="Twitter">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Facebook">
-                                    Facebook
+                            <li class="social-links__item">
+                                <a class="social-link social-link--facebook" href="#" aria-label="Facebook">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="LinkedIn">
-                                    LinkedIn
+                            <li class="social-links__item">
+                                <a class="social-link social-link--linkedin" href="#" aria-label="LinkedIn">
                                 </a>
                             </li>
                         </ul>
@@ -294,25 +259,21 @@
                         <p class="team__card-position">
                             UI Designer
                         </p>
-                        <ul class="team__social-links list">
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Instagramm">
-                                    Instagramm
+                        <ul class="list social-links">
+                            <li class="social-links__item">
+                                <a class="social-link social-link--instagramm" href="#" aria-label="Instagramm">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Twitter">
-                                    Twitter
+                            <li class="social-links__item">
+                                <a class="social-link social-link--twitter" href="#" aria-label="Twitter">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="Facebook">
-                                    Facebook
+                            <li class="social-links__item">
+                                <a class="social-link social-link--facebook" href="#" aria-label="Facebook">
                                 </a>
                             </li>
-                            <li class="team__social-links-item">
-                                <a class="social-link" href="#" aria-label="LinkedIn">
-                                    LinkedIn
+                            <li class="social-links__item">
+                                <a class="social-link social-link--linkedin" href="#" aria-label="LinkedIn">
                                 </a>
                             </li>
                         </ul>
@@ -386,25 +347,21 @@
                 <b class="footer__action-text">
                     Присоединяйтесь
                 </b>
-                <ul class="footer__social-links-list list">
-                    <li class="footer__social-links-list-item">
-                        <a class="social-link footer__social-link" href="#" aria-label="Instagramm">
-                            Instagramm
+                <ul class="list social-links">
+                    <li class="social-links__item">
+                        <a class="social-link footer__social-link social-link--instagramm" href="#" aria-label="Instagramm">
                         </a>
                     </li>
-                    <li class="footer__social-links-list-item">
-                        <a class="social-link footer__social-link" href="#" aria-label="Twitter">
-                            Twitter
+                    <li class="social-links__item">
+                        <a class="social-link footer__social-link social-link--twitter" href="#" aria-label="Twitter">
                         </a>
                     </li>
-                    <li class="footer__social-links-list-item">
-                        <a class="social-link footer__social-link" href="#" aria-label="Facebook">
-                            Facebook
+                    <li class="social-links__item">
+                        <a class="social-link footer__social-link social-link--facebook" href="#" aria-label="Facebook">
                         </a>
                     </li>
-                    <li class="footer__social-links-list-item">
-                        <a class="social-link footer__social-link" href="#" aria-label="LinkedIn">
-                            LinkedIn
+                    <li class="social-links__item">
+                        <a class="social-link footer__social-link social-link--linkedin" href="#" aria-label="LinkedIn">
                         </a>
                     </li>
                 </ul>  
