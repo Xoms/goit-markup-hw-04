@@ -55,6 +55,7 @@ h1,h2,h3,p {
 
 a{
     text-decoration: none;
+    color: var(--main-text);
 }
 
 a:hover {
@@ -69,6 +70,7 @@ a:hover {
 }
 
 .link {
+    display: flex;
     font-family: "Roboto-Medium", sans-serif;
     &:hover, &:focus {
         color: var(--accent);
@@ -79,15 +81,47 @@ a:hover {
     margin: 0;
     padding: 0;
     list-style: none;
-    color: var(--main-text);    
+    color: var(--main-text);  
+    display: flex;  
+}
+
+.social-links{
+    justify-content: center;
+    &__item:not(:last-child){
+        margin-right: 10px;
+    }
 }
 
 .social-link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    background-color: var(--main-bg);
+    background-repeat: no-repeat;
+    background-position: center;    
     color: var(--social-links);
+    
+
     &:hover, &:focus{
         color: var(--light-text);
         background-color: var(--accent);
     }
+}
+.social-link--instagramm{
+    background-image: url('../images/icons/instagram.svg');
+
+}
+.social-link--twitter{
+    background-image: url('../images/icons/twitter.svg');
+
+}
+.social-link--facebook{
+    background-image: url('../images/icons/facebook.svg');
+}
+.social-link--linkedin{
+    background-image: url('../images/icons/linkedin.svg');
 }
 
 .logo {
@@ -105,7 +139,11 @@ a:hover {
 
 
 .btn {
+    display: block;
     font-size: 16px;
+
+    border: none;
+    border-radius: 4px;
     &:hover,&:focus {
         cursor: pointer
     }
@@ -160,12 +198,25 @@ a:hover {
         display: block;
         padding-top: 32px;
         padding-bottom: 32px;     
-        font-size: 14px;         
+        font-size: 14px;
+        position: relative;  
+        &--active {
+            color: var(--accent);
+            &::after{
+                content: '';                                
+                display: block;
+                width: 100%;            
+                height: 4px;            
+                border-radius: 2px;
+                background-color: var(--accent);
+    
+                position: absolute;
+                top: 77px;  //80+1 border-bottom
+            }     
+        }      
     }
     
-    &__link--active {
-        color: var(--accent);       
-    }
+    
     
     &__contacts{   
         display: flex;        
@@ -174,8 +225,25 @@ a:hover {
             margin-right: 30px;
         }
         &-link{
+            align-items: center;
             font-size: 14px;
-            color: var(--secondary-text);            
+            color: var(--secondary-text);
+            &::before{
+                content: '';
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+            
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+            &--icon-envelope::before{
+                background-image: url(../images/icons/envelope.svg);
+            }
+            &--icon-tel::before {
+                background-image: url(../images/icons/smartphone.svg);
+            }                   
         }
     }
 }
@@ -185,27 +253,21 @@ a:hover {
 /*MAIN*/
 /*Hero section*/
 .hero {
-    width:auto;
-    height: 600px;
-    background-image: url(../images/hero/header-desktop-img.jpg);    
+    min-width:1600px;
+    min-height: 600px;
+    padding-top: 200px;
+
+    background-image: linear-gradient(rgba(47, 48, 58, 0.8)),
+        url(../images/hero/header-desktop-img.jpg);    
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    color: var(--light-text);
-    &__image-overlay{
-        content:"";
-        position: absolute;
-        width: 100%;
-        height: 600px;
-        background-color: rgba(47, 48, 58, 0.8);
-        z-index: 1;
-    }
+
+    color: var(--light-text); 
+
     &__title{
-        margin: auto;
-        position: absolute;
-        top: 200px ;
-        left: 0;
-        right: 0;
+        margin-bottom: 30px;
+        margin-left:auto;
+        margin-right: auto;
 
         font-family: "Roboto-Black", sans-serif;
         font-size: 44px;
@@ -214,18 +276,11 @@ a:hover {
         text-transform: uppercase;
         text-align: center;       
         
-        z-index: 100;
     }
-    &__button{        
-        margin: auto;        
+    &__button{
+        margin-left: auto; 
+        margin-right: auto;       
         padding: 10px 32px;        
-        position: absolute;
-        border: none;
-        border-radius: 4px;
-        top: 350px;
-        left: 0;
-        right: 0;
-        z-index: 100;
     }
 }
 
@@ -237,14 +292,31 @@ a:hover {
         &-item:not(:last-child){
             margin-right: 30px;
         }
+        &-item::before {
+            content: '';
+            display: block;
+            height: 120px;
+            background-color: var(--secondary-bg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 70px;
+            margin-bottom: 30px;
+            
+        }
+        &-item--icon-antenn::before{
+            background-image: url('../images/features/feature1.svg');
+        }
+        &-item--icon-clock::before{
+            background-image: url('../images/features/feature2.svg');
+        }
+        &-item--icon-diagramm::before{
+            background-image: url('../images/features/feature3.svg');
+        }
+        &-item--icon-astronaut::before{
+            background-image: url('../images/features/feature4.svg');
+        }
     }    
 
-    &__item-image{
-        padding: 25px 100px;
-        margin-bottom: 30px;
-        text-align: center;
-        background-color: var(--secondary-bg);
-    }
     &__item-title{
         margin-bottom: 10px;
         text-transform: uppercase;
@@ -397,19 +469,20 @@ a:hover {
         line-height: 1.14;        
     }
 
-    &__social-links-list-item{
-        background-color: var(--footer-social-bg);
-    }
     &__social-link{
-        color: var(--light-text);        
+        color: var(--light-text); 
+        background-color: var(--footer-social-bg);       
     }
 }
 
 /*PORTFOLIO*/
 .filters {
     margin-bottom: 50px;
-    text-align: center;
-
+    
+    &__content{
+        display: flex;
+        justify-content: center;
+    }
     &__radio-btn{
         display: none;     
     }
@@ -421,8 +494,7 @@ a:hover {
         line-height:1.625;
 
         background-color: var(--secondary-bg);
-        border: none;
-        border-radius: 4px;
+        
 
         .filters__radio-btn:checked + &, &:hover, &:focus{
             cursor: pointer;
