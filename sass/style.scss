@@ -233,7 +233,7 @@ a:hover {
 /*MAIN*/
 /*Hero section*/
 .hero {
-    min-width:1600px;
+    
     min-height: 600px;
     padding-top: 200px;
 
@@ -260,7 +260,8 @@ a:hover {
     &__button{
         margin-left: auto; 
         margin-right: auto;       
-        padding: 10px 32px;        
+        padding: 10px 32px;
+        color: currentColor;      
     }
 }
 
