@@ -126,19 +126,31 @@ a:hover {
 }
 
 .social-link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--main-bg);
-  background-repeat: no-repeat;
-  background-position: center;
   color: var(--social-links);
 }
 
 .social-link:hover, .social-link:focus {
   color: var(--light-text);
   background-color: var(--accent);
+}
+
+.social-link__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .social-link--instagramm {
@@ -280,22 +292,9 @@ a:hover {
   color: var(--secondary-text);
 }
 
-.nav__contacts-link::before {
-  content: '';
+.nav__contacts-icon {
   margin-right: 10px;
-  width: 20px;
-  height: 20px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.nav__contacts-link--icon-envelope::before {
-  background-image: url(../images/icons/envelope.svg);
-}
-
-.nav__contacts-link--icon-tel::before {
-  background-image: url(../images/icons/smartphone.svg);
+  fill: currentColor;
 }
 
 /*HEADER END*/
@@ -341,31 +340,19 @@ a:hover {
   margin-right: 30px;
 }
 
-.features__list-item::before {
-  content: '';
-  display: block;
-  height: 120px;
+.features__svg-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 100px;
   background-color: var(--secondary-bg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 70px;
   margin-bottom: 30px;
 }
 
-.features__list-item--icon-antenn::before {
-  background-image: url("../images/features/feature1.svg");
-}
-
-.features__list-item--icon-clock::before {
-  background-image: url("../images/features/feature2.svg");
-}
-
-.features__list-item--icon-diagramm::before {
-  background-image: url("../images/features/feature3.svg");
-}
-
-.features__list-item--icon-astronaut::before {
-  background-image: url("../images/features/feature4.svg");
+.features__item-icon {
+  height: 70px;
+  width: 70px;
+  color: currentColor;
 }
 
 .features__item-title {
@@ -496,6 +483,10 @@ a:hover {
 
 .clients__link:hover {
   color: accent;
+}
+
+.clients__logo {
+  fill: currentColor;
 }
 
 /*MAIN END*/

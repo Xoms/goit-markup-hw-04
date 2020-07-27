@@ -93,20 +93,26 @@ a:hover {
 }
 
 .social-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
 
-    background-color: var(--main-bg);
-    background-repeat: no-repeat;
-    background-position: center;    
+    background-color: var(--main-bg);      
     color: var(--social-links);
     
 
     &:hover, &:focus{
         color: var(--light-text);
         background-color: var(--accent);
+    }
+
+    &__icon {        
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
     }
 }
 .social-link--instagramm{
@@ -227,23 +233,11 @@ a:hover {
         &-link{
             align-items: center;
             font-size: 14px;
-            color: var(--secondary-text);
-            &::before{
-                content: '';
-                margin-right: 10px;
-                width: 20px;
-                height: 20px;
-            
-                background-repeat: no-repeat;
-                background-size: contain;
-                background-position: center;
-            }
-            &--icon-envelope::before{
-                background-image: url(../images/icons/envelope.svg);
-            }
-            &--icon-tel::before {
-                background-image: url(../images/icons/smartphone.svg);
-            }                   
+            color: var(--secondary-text);                          
+        }
+        &-icon{            
+            margin-right: 10px;
+            fill: currentColor;
         }
     }
 }
@@ -285,47 +279,38 @@ a:hover {
 }
 
 /*Features section*/
+
 .features {
     &__list{
         display: flex;
         
         &-item:not(:last-child){
             margin-right: 30px;
-        }
-        &-item::before {
-            content: '';
-            display: block;
-            height: 120px;
-            background-color: var(--secondary-bg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 70px;
-            margin-bottom: 30px;
-            
-        }
-        &-item--icon-antenn::before{
-            background-image: url('../images/features/feature1.svg');
-        }
-        &-item--icon-clock::before{
-            background-image: url('../images/features/feature2.svg');
-        }
-        &-item--icon-diagramm::before{
-            background-image: url('../images/features/feature3.svg');
-        }
-        &-item--icon-astronaut::before{
-            background-image: url('../images/features/feature4.svg');
-        }
-    }    
-
-    &__item-title{
-        margin-bottom: 10px;
-        text-transform: uppercase;
+        }       
     }
-    &__item-text{
-        font-family: "Roboto-Regular", sans-serif;
-        font-size: 14px;        
-        line-height: 1.71;
-        color:var(--secondary-text);
+
+    &__svg-container{
+        display: flex;
+        padding: 25px 100px;
+        background-color: var(--secondary-bg);
+        margin-bottom: 30px;
+    }
+    &__item {
+        &-icon{
+            height: 70px;
+            width: 70px;
+            color: currentColor;
+        }
+        &-title{
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        &-text{
+            font-family: "Roboto-Regular", sans-serif;
+            font-size: 14px;        
+            line-height: 1.71;
+            color:var(--secondary-text);
+        }
     }
 }
 /*Activities secton*/
@@ -413,6 +398,7 @@ a:hover {
     &__item:not(:last-child){
         margin-right: 30px;
     }
+    
 
 
     &__link{
@@ -426,6 +412,9 @@ a:hover {
         &:hover{
             color: accent;
         }
+    }
+    &__logo{        
+        fill:currentColor;
     }
 }
 /*MAIN END*/
