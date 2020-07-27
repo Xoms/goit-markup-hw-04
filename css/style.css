@@ -153,22 +153,6 @@ a:hover {
   fill: currentColor;
 }
 
-.social-link--instagramm {
-  background-image: url("../images/icons/instagram.svg");
-}
-
-.social-link--twitter {
-  background-image: url("../images/icons/twitter.svg");
-}
-
-.social-link--facebook {
-  background-image: url("../images/icons/facebook.svg");
-}
-
-.social-link--linkedin {
-  background-image: url("../images/icons/linkedin.svg");
-}
-
 .logo {
   display: block;
   font-size: 26px;
@@ -478,11 +462,13 @@ a:hover {
           justify-content: center;
   width: 170px;
   height: 90px;
-  border: 1px solid #AFB1B8;
+  border: 1px solid var(--social-links);
+  color: var(--social-links);
 }
 
 .clients__link:hover {
-  color: accent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
 }
 
 .clients__logo {
