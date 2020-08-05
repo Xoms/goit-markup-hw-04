@@ -151,22 +151,6 @@ a:hover {
   fill: currentColor;
 }
 
-.social-link--instagramm {
-  background-image: url("../images/icons/instagram.svg");
-}
-
-.social-link--twitter {
-  background-image: url("../images/icons/twitter.svg");
-}
-
-.social-link--facebook {
-  background-image: url("../images/icons/facebook.svg");
-}
-
-.social-link--linkedin {
-  background-image: url("../images/icons/linkedin.svg");
-}
-
 .logo {
   display: block;
   font-size: 26px;
@@ -299,7 +283,6 @@ a:hover {
 /*MAIN*/
 /*Hero section*/
 .hero {
-  min-width: 1600px;
   min-height: 600px;
   padding-top: 200px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8))), url(../images/hero/header-desktop-img.jpg);
@@ -325,6 +308,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 32px;
+  color: currentColor;
 }
 
 /*Features section*/
@@ -476,11 +460,13 @@ a:hover {
           justify-content: center;
   width: 170px;
   height: 90px;
-  border: 1px solid #AFB1B8;
+  border: 1px solid var(--social-links);
+  color: var(--social-links);
 }
 
 .clients__link:hover {
-  color: accent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
 }
 
 .clients__logo {
