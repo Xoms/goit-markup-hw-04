@@ -34,6 +34,9 @@
         &:nth-child(odd){
             margin-right: 0px;
         }
+        &:not(:nth-last-child(-n+2)){
+            margin-bottom: 0px;
+        }
 
         &:not(:nth-child(3n)){
             margin-right: 30px;
