@@ -10,6 +10,9 @@
     }
     @media screen and (min-width: $desktop){
         @include elements-width(6);
+        &:not(:nth-last-child(-n + 2)){
+            margin-bottom: 0;
+        }
         &:not(:last-child){
             margin-right: 30px;
         }
