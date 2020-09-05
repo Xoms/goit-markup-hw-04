@@ -2,7 +2,6 @@
     
     min-height: 400px;
     width: 100%;
-    padding-top: 118px;
     display: flex;
     align-items: center;
     background-image: 
@@ -28,10 +27,14 @@
     }
 }
 .hero__container {
-    max-width: 450px;
-    padding: 0 15px;
+    max-width: 100%;
+    padding: 30px 15px;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $mobile) {  
+        max-width: 450px;
+        margin: auto;     
+    }
     @media screen and (min-width: $desktop) {
         
         max-width: 730px;
