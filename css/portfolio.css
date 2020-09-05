@@ -1013,14 +1013,8 @@ a:hover {
   .projects__item {
     width: calc((100% - (2 - 1) * 30px) / 2);
   }
-  .projects__item:not(:last-child) {
-    margin-bottom: 0px;
-  }
   .projects__item:nth-child(odd) {
     margin-right: 30px;
-  }
-  .projects__item:not(:nth-last-child(-n+2)) {
-    margin-bottom: 30px;
   }
 }
 
@@ -1031,7 +1025,7 @@ a:hover {
   .projects__item:nth-child(odd) {
     margin-right: 0px;
   }
-  .projects__item:not(:nth-last-child(-n+2)) {
+  .projects__item:not(:last-child) {
     margin-bottom: 0px;
   }
   .projects__item:not(:nth-child(3n)) {

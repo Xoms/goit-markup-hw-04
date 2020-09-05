@@ -17,16 +17,17 @@
     @media screen and (min-width:$tablet) {
         @include elements-width(2);
        
-        &:not(:last-child){
-            margin-bottom: 0px;
-        }
+       
         &:nth-child(odd){
             margin-right: 30px;
         }
 
-        &:not(:nth-last-child(-n+2)){
-            margin-bottom: 30px;
-        }
+        // &:not(:last-child){
+        //     margin-bottom: 0px;
+        // }
+        // &:not(:nth-last-child(-n+2)){
+        //     margin-bottom: 30px;
+        // }
        
     }
     @media screen and (min-width:$desktop) {
@@ -34,9 +35,13 @@
         &:nth-child(odd){
             margin-right: 0px;
         }
-        &:not(:nth-last-child(-n+2)){
+        
+        &:not(:last-child){
             margin-bottom: 0px;
         }
+        // &:not(:nth-last-child(-n+2)){
+        //     margin-bottom: 0px;
+        // }
 
         &:not(:nth-child(3n)){
             margin-right: 30px;
