@@ -17,5 +17,8 @@
  .footer__contacts-link {
     @extend %link;
     display: block;
-    color: var(--footer-contacts);        
+    color: var(--footer-contacts);
+    &:not(:last-child){
+        margin-bottom: 9px;
+    }       
 }
