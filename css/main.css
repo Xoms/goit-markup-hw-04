@@ -1002,6 +1002,9 @@ a:hover {
   .features__item {
     width: calc((100% - (4 - 1) * 30px) / 4);
   }
+  .features__item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 0;
+  }
   .features__item:not(:nth-child(4n)) {
     margin-right: 30px;
   }
